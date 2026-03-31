@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <style>
+      /* Reset */
+      *, *::before, *::after {
+        box-sizing: border-box;
+      }
+
+      /* Base */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: system-ui, sans-serif;
+        font-size: 16px;
+        background: #f5f5f5;
+        color: #333;
+      }
+
+      /* App card */
+      .app {
+        max-width: 480px;
+        margin: 48px auto;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      /* Heading */
+      h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 300;
+        color: #5c6bc0;
+        padding: 24px 0 16px;
+        margin: 0;
+      }
+
+      /* Input area */
+      .input-area {
+        display: flex;
+        gap: 8px;
+        padding: 0 16px 16px;
+      }
+
+      #new-todo {
+        flex: 1;
+        padding: 10px 12px;
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+        font-size: 1rem;
+        outline: none;
+      }
+
+      #new-todo:focus {
+        border-color: #5c6bc0;
+        box-shadow: 0 0 0 2px rgba(92, 107, 192, 0.2);
+      }
+
+      #add-btn {
+        padding: 10px 18px;
+        background: #5c6bc0;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+
+      #add-btn:hover {
+        background: #3f51b5;
+      }
+
+      #add-btn:focus-visible {
+        outline: 2px solid #5c6bc0;
+        outline-offset: 2px;
+      }
+
+      /* Todo list */
+      #todo-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Footer */
+      .app-footer {
+        padding: 10px 16px;
+        font-size: 0.85rem;
+        color: #888;
+        border-top: 1px solid #e0e0e0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="app">
+      <h1>todos</h1>
+
+      <section class="input-area">
+        <input
+          type="text"
+          id="new-todo"
+          placeholder="What needs to be done?"
+          aria-label="New todo"
+        >
+        <button id="add-btn" aria-label="Add todo">Add</button>
+      </section>
+
+      <section class="todo-list-area" aria-label="Todo list">
+        <ul id="todo-list" role="list"></ul>
+      </section>
+
+      <footer class="app-footer" hidden></footer>
+    </main>
+
+    <script>
+      // scripts added in subsequent tickets
+    </script>
+  </body>
+</html>
